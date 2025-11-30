@@ -1,4 +1,4 @@
-# 📄 DocuMind - AI-Powered PDF Question & Answer Assistant
+# 📄 AskMyPDF - AI-Powered PDF Question & Answer Assistant
 
 > Transform your PDFs into interactive knowledge bases with AI-powered conversations
 
@@ -134,7 +134,7 @@ graph TD
 
 1. **Clone & Install**
 ```
-[git clone https://github.com/yourusername/documind](https://github.com/Sweekar07/PDF_QA.git)
+[git clone https://github.com/yourusername/AskMyPDF](https://github.com/Sweekar07/PDF_QA.git)
 cd PDF_QA
 npm install
 ```
