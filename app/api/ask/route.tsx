@@ -41,11 +41,12 @@ QUESTION: ${question}
 CONTEXT:
 ${context}
 
-Please provide a clear and accurate answer based only on the context provided.`;
+Please provide a clear and accurate answer based only on the context provided.
+Note: Format the answer in Markdown (use bold for key terms, bullet lists when helpful).`;
 
     // Generate answer using Gemini
     const response = await genAI.models.generateContent({
-      model: "gemini-2.5-flash-lite",
+      model: process.env.QA_LLM_MODEL!,
       contents: prompt
     });
 

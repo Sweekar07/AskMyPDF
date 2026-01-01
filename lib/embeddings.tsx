@@ -10,7 +10,7 @@ export async function embedTexts(texts: string[]): Promise<number[][]> {
 
     for (const text of batch) {
       const result = await genAI.models.embedContent({
-        model: "gemini-embedding-001",
+        model: process.env.EMBEDDING_MODEL!,
         contents: text,
         config: {
           outputDimensionality: 768,
@@ -31,9 +31,8 @@ export async function embedTexts(texts: string[]): Promise<number[][]> {
 }
 
 export async function embedQuery(query: string): Promise<number[]> {
-  console.log("normal query:", query);
   const response = await genAI.models.embedContent({
-    model: "gemini-embedding-001",
+    model: process.env.EMBEDDING_MODEL!,
     contents: query,
     config: {
       outputDimensionality: 768,

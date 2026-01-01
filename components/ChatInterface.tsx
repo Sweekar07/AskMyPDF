@@ -1,6 +1,7 @@
 "use client"
 import { useState, useRef, useEffect } from "react"
 import { useAppContext } from './AppProvider'
+import MarkdownMessage from "./MarkdownMessage";
 
 
 export default function ChatInterface() {
@@ -121,7 +122,9 @@ export default function ChatInterface() {
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
                         )}
-                        <p className="text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap">{chat.answer}</p>
+                        <div className="text-sm text-gray-800 dark:text-gray-200">
+                          <MarkdownMessage content={chat.answer} />
+                        </div>
                       </div>
                     </div>
                   </div>
